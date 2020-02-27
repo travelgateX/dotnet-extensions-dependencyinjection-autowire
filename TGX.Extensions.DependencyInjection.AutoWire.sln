@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TGX.Extensions.DependencyInjection.AutoWire", "TGX.Extensions.DependencyInjection.AutoWire\TGX.Extensions.DependencyInjection.AutoWire.csproj", "{71219AFB-5652-44A2-A14E-FC53E1E3F0C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DBD89B6E-D6B7-4A03-AB13-2B93C9DF4FF3}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget.config = Nuget.config
+		README.md = README.md
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGX.Extensions.DependencyInjection.AutoWire.Tests", "TGX.Extensions.DependencyInjection.AutoWire.Tests\TGX.Extensions.DependencyInjection.AutoWire.Tests.csproj", "{0E150B4D-B3E3-42E9-AE05-9160340EC87F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGX.Extensions.DependencyInjection.AutoWire.Example.Web", "TGX.Extensions.DependencyInjection.AutoWire.Example.Web\TGX.Extensions.DependencyInjection.AutoWire.Example.Web.csproj", "{3F3BF4B0-F48C-4FD3-BE6B-CDE3EA193665}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71219AFB-5652-44A2-A14E-FC53E1E3F0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71219AFB-5652-44A2-A14E-FC53E1E3F0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71219AFB-5652-44A2-A14E-FC53E1E3F0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71219AFB-5652-44A2-A14E-FC53E1E3F0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E150B4D-B3E3-42E9-AE05-9160340EC87F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E150B4D-B3E3-42E9-AE05-9160340EC87F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E150B4D-B3E3-42E9-AE05-9160340EC87F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E150B4D-B3E3-42E9-AE05-9160340EC87F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F3BF4B0-F48C-4FD3-BE6B-CDE3EA193665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3BF4B0-F48C-4FD3-BE6B-CDE3EA193665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3BF4B0-F48C-4FD3-BE6B-CDE3EA193665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3BF4B0-F48C-4FD3-BE6B-CDE3EA193665}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C01537A9-A111-4CDC-A25F-4F29262D198F}
+	EndGlobalSection
+EndGlobal
