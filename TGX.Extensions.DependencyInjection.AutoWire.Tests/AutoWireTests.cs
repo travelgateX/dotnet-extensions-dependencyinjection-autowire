@@ -54,7 +54,7 @@ namespace TGX.Extensions.DependencyInjection.AutoWire.Tests
             var config = GetConfiguration();
 
             var sc = new ServiceCollection();
-            sc.AutoWire(config, options => options.IncludePrefixed = new[] { typeof(OtherClass).Namespace });
+            sc.AutoWire(config, options => options.IncludeNamespaceOf<OtherClass>());
             var sp = sc.BuildServiceProvider();
 
             Assert.NotNull(sp.GetRequiredService<OtherClass>());

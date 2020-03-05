@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
@@ -20,8 +21,8 @@ namespace TGX.Extensions.DependencyInjection.AutoWire
         public bool RegisterByAttribute { get; set; }
 
         /// <summary>
-        /// Specifies a collection of string prefixes by which all classes that match them
-        /// by their full name will be registered as services.
+        /// Specifies a collection of string prefixes by which all classes that match these
+        /// by their namespace will be registered.
         /// </summary>
         public IEnumerable<string> IncludePrefixed { get; set; } = new List<string>();
         
@@ -47,6 +48,17 @@ namespace TGX.Extensions.DependencyInjection.AutoWire
         /// Action to execute if an <see cref="IOptionsMonitor{TOptions}"/> binding exception occurs.
         /// </summary>
         public Action<object, Type, Exception> OnOptionsMonitorUpdateException { get; set; }
+
+        /// <summary>
+        /// Helper method to append namespaces to <see cref="IncludePrefixed"/>
+        /// </summary>
+        /// <typeparam name="T">A type to infer its namespace</typeparam>
+        /// <returns>The current <see cref="AutoWireOptions"/> instance.</returns>
+        public AutoWireOptions IncludeNamespaceOf<T>()
+        {
+            IncludePrefixed = IncludePrefixed.Append(typeof(T).Namespace);
+            return this;
+        }
         
         internal Assembly EntryAssembly { get; set; }
     }
