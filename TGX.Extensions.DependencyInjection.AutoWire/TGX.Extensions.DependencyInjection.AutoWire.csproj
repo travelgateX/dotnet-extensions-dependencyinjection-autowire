@@ -13,11 +13,11 @@
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <Description>Library to auto register dependencies and to auto bind option classes for Microsoft.Extensions.DependencyInjection</Description>
         <Company>Best Day Travel Group</Company>
-        <Version>2.0.4</Version>
-        <AssemblyVersion>2.0.4</AssemblyVersion>
-        <FileVersion>2.0.4</FileVersion>
+        <Version>2.0.5</Version>
+        <AssemblyVersion>2.0.5</AssemblyVersion>
+        <FileVersion>2.0.5</FileVersion>
         <LangVersion>latest</LangVersion>
-        <PackageVersion>2.0.4</PackageVersion>
+        <PackageVersion>2.0.5</PackageVersion>
         <Title>AutoWire</Title>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <RepositoryUrl>https://github.com/travelgateX/dotnet-extensions-dependencyinjection-autowire</RepositoryUrl>
