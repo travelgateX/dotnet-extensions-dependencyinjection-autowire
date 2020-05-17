@@ -13,10 +13,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - name: dotnet-sonarscanner
+      uses: Secbyte/dotnet-sonarscanner@v2.2
       with:
-        dotnet-version: 3.1.101
+        # Command to invoke build
+        buildCommand: dotnet build --configuration Release --no-restore
+        # Command to invoke tests
+        testCommand: dotnet test --no-restore --verbosity normal
+        # Specifies the key of the analyzed project in SonarQube
+        projectKey: autowire
+        # Specifies the name of the analyzed project in SonarQube
+        projectName: autowire
+        # The server URL
+        sonarHostname: http://localhost:9000
+        # Organisation
+        sonarOrganisation: default
     - name: Install dependencies
       run: dotnet restore
     - name: Build
