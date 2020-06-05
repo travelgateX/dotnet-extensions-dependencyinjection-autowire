@@ -13,11 +13,13 @@ jobs:
       image: mcr.microsoft.com/dotnet/core/sdk:3.1
     steps:
     - uses: actions/checkout@v2
-    - name: List files
-      run: ls -la
     - name: Install dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: TGX.Extensions.DependencyInjection.AutoWire/bin/Release/netstandard2.0
