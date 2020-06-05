@@ -12,14 +12,18 @@ jobs:
     container:
       image: mcr.microsoft.com/dotnet/core/sdk:3.1
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repo
+      uses: actions/checkout@v2
     - name: Install dependencies
-      run: dotnet restore
+      uses: docker://mcr.microsoft.com/dotnet/core/sdk:3.1
+      with:
+        entrypoint: dotnet
+        args: restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
-    - name: Upload a Build Artifact
+    - name: Upload Build Artifact
       uses: actions/upload-artifact@v2
       with:
         path: TGX.Extensions.DependencyInjection.AutoWire/bin/Release/netstandard2.0
