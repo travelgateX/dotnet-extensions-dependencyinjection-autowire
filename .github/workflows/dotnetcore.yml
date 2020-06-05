@@ -12,7 +12,7 @@ jobs:
     container:
       image: mcr.microsoft.com/dotnet/core/sdk:3.1
       volumes: 
-        - ${{env.working-directory}}:/app
+        - ./:/app
     steps:
     - name: List files
       run: ls -la
