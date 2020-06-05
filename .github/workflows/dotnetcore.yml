@@ -1,4 +1,4 @@
-name: AutoWire CI
+name: AutoWire
 
 on:
   push:
