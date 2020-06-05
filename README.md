@@ -1,5 +1,7 @@
 # AutoWire 
 
+![AutoWire](https://github.com/travelgateX/dotnet-extensions-dependencyinjection-autowire/workflows/AutoWire/badge.svg)
+
 Library to auto register dependencies and to auto bind option classes for Microsoft.Extensions.DependencyInjection
 
 # Getting Started
